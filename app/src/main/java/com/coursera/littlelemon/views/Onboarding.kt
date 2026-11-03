@@ -89,7 +89,7 @@ fun OnboardingScreen(
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(32.dp)
         ) {
-            Row() {
+            Row {
                 Box(
                     modifier = Modifier
                         .padding(innerPadding)
