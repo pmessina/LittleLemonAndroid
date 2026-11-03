@@ -16,7 +16,7 @@ class MenuViewModel(repository: MenuRepository) : ViewModel() {
     private val _selectedCategory = MutableStateFlow<String?>(null)
     val selectedCategory: StateFlow<String?> = _selectedCategory
 
-    val menuItems: StateFlow<List<LLMenuItem>> =
+    val menuItems: StateFlow<List<MenuItem>> =
         combine(
             repository.menuItems.catch {
                 Log.e("MenuViewModel", "Failed to load menu", it)

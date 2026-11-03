@@ -12,15 +12,15 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.serialization.json.Json
 
-private fun MenuItemNetwork.toLLMenuItem() =
-    LLMenuItem(id, title, description, price, image, category)
+private fun MenuItemNetwork.toMenuItem() =
+    MenuItem(id, title, description, price, image, category)
 
 class MenuRepository(
     private val httpClient: HttpClient = NetworkClient.instance
 
 ) {
-    val menuItems: Flow<List<LLMenuItem>> = flow {
-        emit(fetchMenu().map { it.toLLMenuItem() })
+    val menuItems: Flow<List<MenuItem>> = flow {
+        emit(fetchMenu().map { it.toMenuItem() })
     }
 
     private suspend fun fetchMenu(): List<MenuItemNetwork> {

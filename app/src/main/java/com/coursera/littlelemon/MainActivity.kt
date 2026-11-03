@@ -46,7 +46,6 @@ fun LittleLemonAndroidApp(userViewModel: UserViewModel = koinViewModel()) {
     val userExists by userViewModel.userExists.collectAsStateWithLifecycle()
     val currentUser by userViewModel.currentUser.collectAsStateWithLifecycle()
     val navController = rememberNavController()
-    var currentDestination by rememberSaveable { mutableStateOf(AppDestinations.HOME) }
 
     // Decide the start destination once; later user changes must not reset the back stack
     var startDestination by rememberSaveable { mutableStateOf<String?>(null) }
@@ -81,62 +80,7 @@ fun LittleLemonAndroidApp(userViewModel: UserViewModel = koinViewModel()) {
             )
         }
     }
-
-//    NavigationSuiteScaffold(
-//        navigationSuiteItems = {
-//            AppDestinations.entries.forEach {
-//                item(
-//                    icon = {
-//                        Icon(
-//                            painterResource(it.icon),
-//                            contentDescription = it.label
-//                        )
-//                    },
-//                    label = { Text(it.label) },
-//                    selected = it == currentDestination,
-//                    onClick = {
-//                        currentDestination = it
-//                        navController.navigate(it.name)
-//                    }
-//                )
-//            }
-//        }
-//    ) {
-//        NavHost(navController = navController, startDestination = AppDestinations.HOME.name) {
-//            composable(AppDestinations.HOME.name) {
-//                HomeScreen()
-//            }
-//            composable(AppDestinations.FAVORITES.name) {
-//                FavoritesScreen()
-//            }
-//            composable(AppDestinations.PROFILE.name) {
-//                ProfileScreen()
-//            }
-//        }
-//    }
 }
 
-enum class AppDestinations(
-    val label: String,
-    val icon: Int,
-) {
-    HOME("Home", R.drawable.ic_home),
-    FAVORITES("Favorites", R.drawable.ic_favorite),
-    PROFILE("Profile", R.drawable.ic_account_box),
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    LittleLemonAndroidTheme {
-        Greeting("Android")
-    }
-}
