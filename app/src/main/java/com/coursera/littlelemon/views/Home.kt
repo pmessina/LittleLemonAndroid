@@ -44,8 +44,8 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import coil3.request.ImageRequest
-import com.coursera.littlelemon.MenuItem
-import com.coursera.littlelemon.MenuViewModel
+import com.coursera.littlelemon.menu.MenuItem
+import com.coursera.littlelemon.menu.MenuViewModel
 import com.coursera.littlelemon.R
 import com.coursera.littlelemon.ToolbarScreenProfileIcon
 import org.koin.androidx.compose.koinViewModel
@@ -55,6 +55,7 @@ import org.koin.androidx.compose.koinViewModel
 fun HomeScreen(
     modifier: Modifier = Modifier,
     onProfileClick: () -> Unit = {},
+    onBackClick: () -> Unit = {},
     viewModel: MenuViewModel = koinViewModel(),
 ) {
 
@@ -70,7 +71,9 @@ fun HomeScreen(
         topBar = {
             ToolbarScreenProfileIcon(
                 title = "Little Lemon",
-                onProfileClick = onProfileClick
+                onImageClick = onProfileClick,
+                onImageClickLabel = "Open profile",
+                onBackClick = onBackClick
             )
         }
     ) { paddingValues ->

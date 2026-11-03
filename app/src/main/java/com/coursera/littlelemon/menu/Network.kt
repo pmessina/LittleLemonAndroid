@@ -1,8 +1,7 @@
-package com.coursera.littlelemon
+package com.coursera.littlelemon.menu
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.Serializer
 
 /**
  *Data classes for Retrieving Data from the API

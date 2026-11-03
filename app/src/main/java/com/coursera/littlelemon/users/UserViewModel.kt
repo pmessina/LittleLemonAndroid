@@ -1,4 +1,4 @@
-package com.coursera.littlelemon
+package com.coursera.littlelemon.users
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

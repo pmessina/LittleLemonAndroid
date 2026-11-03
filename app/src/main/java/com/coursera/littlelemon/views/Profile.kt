@@ -23,7 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.coursera.littlelemon.ToolbarScreen
-import com.coursera.littlelemon.User
+import com.coursera.littlelemon.users.User
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true, showSystemUi = true)
@@ -32,10 +32,12 @@ fun ProfileScreen(
     modifier: Modifier = Modifier,
     user: User? = null,
     onLogout: () -> Unit = {},
+    onBack: () -> Unit = {},
 ) {
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
         ToolbarScreen(
-            title = "Profile"
+            title = "Profile",
+            onBackClick = onBack
         )
     }) { innerPadding ->
 

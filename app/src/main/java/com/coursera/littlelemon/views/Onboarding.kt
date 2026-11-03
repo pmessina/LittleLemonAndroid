@@ -30,9 +30,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.input.KeyboardType
-import com.coursera.littlelemon.EmailValidation
-import com.coursera.littlelemon.User
-import com.coursera.littlelemon.validateEmail
+import com.coursera.littlelemon.users.EmailValidation
+import com.coursera.littlelemon.users.User
+import com.coursera.littlelemon.users.validateEmail
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color

@@ -1,4 +1,4 @@
-package com.coursera.littlelemon
+package com.coursera.littlelemon.menu
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

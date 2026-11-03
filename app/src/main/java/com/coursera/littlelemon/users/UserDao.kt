@@ -1,4 +1,4 @@
-﻿package com.coursera.littlelemon
+﻿package com.coursera.littlelemon.users
 
 import androidx.room3.Dao
 import androidx.room3.Database

@@ -1,4 +1,4 @@
-package com.coursera.littlelemon
+package com.coursera.littlelemon.menu
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

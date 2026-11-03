@@ -3,6 +3,12 @@
 import android.app.Application
 import androidx.room3.Room
 import androidx.sqlite.driver.AndroidSQLiteDriver
+import com.coursera.littlelemon.menu.MenuRepository
+import com.coursera.littlelemon.menu.MenuViewModel
+import com.coursera.littlelemon.menu.NetworkClient
+import com.coursera.littlelemon.users.UserDatabase
+import com.coursera.littlelemon.users.UserRepository
+import com.coursera.littlelemon.users.UserViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.viewModelOf
